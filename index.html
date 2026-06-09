@@ -5,18 +5,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/Icon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/img/iconnovo.svg">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script>
+    // Prevent Flash of Unstyled Content (FOUC)
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
 </head>
 
 <body>
   <header id="inicio">
-    <img class="logo" src="assets/img/Icon.svg" alt="logo_mateusdsiqueira">
+    <img class="logo" src="assets/img/iconnovo.svg" alt="logo_mateusdsiqueira">
     <nav id="menu" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="#home">Home</a>
@@ -25,47 +32,47 @@
       <a href="#portfolio">Portólio</a>
       <a href="#contato">Contato</a>
     </nav>
-    <!-- <img class="menu" src="assets/img/menu.svg" alt="menu"> -->
-    <!-- <span style="font-size:40px;cursor:pointer;float:right;" onclick="openNav()"></span> -->
-
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+      <img class="menu" src="assets/img/menu.svg" alt="menu" style="cursor:pointer; width:40px;" onclick="openNav()">
+    </div>
   </header>
   <div class="div-cotainer">
     <article>
       <section id="home">
         <div id="block">
-          <h1>SIQUEIRA PROGRAMADOR</h1>
-          <img id="name" src="assets/img/name.svg" alt="">
-          <h2 class="textopreto">Programador</h2>
-          <p>Se queira ou se não queira, é Siqueira.</p>
-          <a href="https://api.whatsapp.com/send?phone=5561998747470&text=Quero%20fazer%20um%20or%C3%A7amento.">
-            <button type="button" name="button">CONTATO</button>
+          <p class="home-title">Siqueira ou se não queira. É</p>
+          <img id="name" src="assets/img/name-novo.svg" alt="Mateus de Siqueira">
+          <a href="#contato">
+            <button type="button" name="button">ENTRE EM CONTATO</button>
           </a>
         </div>
-      
       </section>
       <section id="quemsou">
-        <h2>Quem sou</h2>
+        <h2>QUEM SOU</h2>
         <div class="apresentacao">
           <div class="coluna">
-            <span>Olá,</span>
-            <p>Meu nome é Mateus de Siqueira, sou desenvolvedor web e de aplicativos. Também possuo conhecimentos em design e web design e me aventuro em áreas de Interfaces do Usuário e Experiência do Usuário.</p>
+            <img class="eu" src="assets/img/logotipo-novo.svg" alt="Mateus de Siqueira" style="width: 300px; display: block; margin: auto;">
           </div>
           <div class="coluna">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quis elementum parturient dignissim. Quisque eu sagittis ac senectus mauris, vitae non in. Porttitor quis tincidunt semper iaculis. Auctor nam quis elit aliquet tristique amet.</p>
             <h3>Habilidades em:</h3>
             <div class="habilidades">
               <div class="circle1">
-                <img src="assets/img/figma.svg" alt="figma">
+                <img src="assets/img/html.svg" alt="html">
               </div>
               <div class="circle2">
-                <img src="assets/img/html.svg" alt="html ">
+                <img src="assets/img/css.svg" alt="css">
               </div>
               <div class="circle3">
-                <img src="assets/img/css.svg" alt="css">
+                <img src="assets/img/figma.svg" alt="figma">
               </div>
             </div>
           </div>
         </div>
-       
         <!-- <div class="card">
           <h4>Diferenciais</h4>
           <h5>Cógigo Limpo</h5>
@@ -77,50 +84,27 @@
         </div> -->
       </section>
       <section id="oquefaco">
-        <h2>O que faço</h2>
+        <h2>O QUE FAÇO</h2>
         <div class="duas-colunas">
           <div class="colunamargem">
-            <img src="assets/img/website.svg" alt="website">
+            <h3>WEB DESIGN</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quis elementum parturient dignissim. Quisque eu sagittis ac senectus mauris, vitae non in. Porttitor quis tincidunt semper iaculis. Auctor nam quis elit aliquet tristique amet.</p>
           </div>
           <div class="colunamargem">
-            <h3>Web Design</h3>
-            <p>Me responsabilizo em criar páginas, organizar layouts e selecionar tipografias e
-              cores. Nesta área, sou capaz de criar landing pages que são páginas únicas de divulgação de serviço ou produto, como no caso desta página que você está vendo agora. E também, sites corporativos, blogs e até lojas virtuais</p>
+            <img src="assets/img/website.svg" alt="website" style="width: 250px;">
           </div>
         </div>
         <div class="linha"></div>
         <div class="duas-colunas">
           <div class="colunamargem">
-            <img src="assets/img/code.png" alt="code">
+            <h3>FRONTEND</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim quis elementum parturient dignissim. Quisque eu sagittis ac senectus mauris, vitae non in. Porttitor quis tincidunt semper iaculis. Auctor nam quis elit aliquet tristique amet.</p>
           </div>
           <div class="colunamargem">
-            <h3>Interfaces Web para Cliente</h3>
-            <p>Também sou desenvolvedor frontend. O frontend é a parte gráfica que irá 
-              aparecer para o cliente, em outras palavras, foca na criação das telas.
-              Nesse sentido, sempre busco o maior nível de
-              fidelidade possível focando na interação e experiência do usuário. </p>
+            <img src="assets/img/code.png" alt="code" style="width: 250px;">
           </div>
         </div>
-        <div class="linha"></div>
-        <div class="duas-colunas">
-          <div class="colunamargem">
-            <img style="width: 200px;" src="assets/img/regranegocial.svg" alt="code">
-          </div>
-          <div class="colunamargem">
-            <h3>Programação da regra negocial</h3>
-            <p>Sou capaz também de programar a regra negocial de sites e sistemas web. Fazendo inclusões em bases de dados e criando funções úteis para seu negócio.</p>
-          </div>
-        </div>
-        <div class="linha"></div>
-        <div class="duas-colunas">
-          <div class="colunamargem">
-            <img style="width: 200px;" src="assets/img/aplicativo.svg" alt="code">
-          </div>
-          <div class="colunamargem">
-            <h3>Aplicativos</h3>
-            <p>Por fim, também consigo desenvolver aplicativos para seu negócio. Podendo ser para android ou IOS.</p>
-          </div>
-        </div>
+
         
       </section>
       <!-- <section id="portfolio">
@@ -140,44 +124,40 @@
       </section> -->
     </article>
     <footer id="contato">
-      <h2>Fale Comigo</h2>
-      <p class="paragrafbranco">Caso tenha interesse em alguns dos serviços citados acima, entre em contato comigo para fazermos um orçamento.</p>
-
-      <a href="https://api.whatsapp.com/send?phone=5561998747470&text=Quero%20fazer%20um%20or%C3%A7amento.">
+      <h2>FALE COMIGO:</h2>
+      <a href="https://wa.me/5561994007470">
         <button id="whatsapp" type="button" name="button">
           <img src="assets/img/whatsapp.svg" alt="whatsapp">WhatsApp
         </button>
       </a>
-      <!-- <a href="#">
+      <a href="https://t.me/">
         <button id="telegram" type="button" name="button">
           <img src="assets/img/telegram.svg" alt="telegram">Telegram
         </button>
-      </a> -->
-      <!-- <p>OU</p> -->
-      <!-- <form action="index.html" method="post">
+      </a>
+      <form action="#" method="post">
         <fieldset>
-          <label for="fname">Nome:</label><br>
+          <label for="fname">NOME:</label><br>
           <input type="text" id="nome" name="fnome" placeholder="Digite aqui"><br>
         </fieldset>
         <fieldset>
-          <label for="email">Email:</label><br>
+          <label for="email">EMAIL:</label><br>
           <input type="email" id="email" name="femail" placeholder="exemplo@email.com"><br>
         </fieldset>
         <fieldset>
-          <label for="telefone">Telefone:</label><br>
-          <input type="tel" id="tele" name="ftele" placeholder="(--) 999999999" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-            required><br>
+          <label for="telefone">TELEFONE:</label><br>
+          <input type="tel" id="tele" name="ftele" placeholder="(--) 999999999" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br>
         </fieldset>
         <fieldset>
-          <label for="assunto">Assunto:</label><br>
+          <label for="assunto">ASSUNTO:</label><br>
           <input type="text" id="assunto" name="fassunto" placeholder="Digite aqui"><br>
         </fieldset>
         <fieldset>
-          <label for="mensagem">Mensagem:</label><br>
+          <label for="mensagem">MENSAGEM:</label><br>
           <textarea name="message" rows="10" cols="30" placeholder="Digite aqui:"></textarea><br>
         </fieldset>
-        <input id="enviar" type="submit" value="Enviar">
-      </form> -->
+        <button id="enviar" type="submit">ENVIAR</button>
+      </form>
       <div class="footer-container">
         <nav id="menu-footer">
           <h3>Menu</h3>
@@ -265,6 +245,36 @@
     function closeNav() {
       document.getElementById("menu").style.width = "0";
     }
+
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-icon-dark');
+    const lightIcon = document.getElementById('theme-icon-light');
+    
+    function updateIcons(theme) {
+      if (theme === 'dark') {
+        darkIcon.style.display = 'block';
+        lightIcon.style.display = 'none';
+      } else {
+        darkIcon.style.display = 'none';
+        lightIcon.style.display = 'block';
+      }
+    }
+
+    // Initial load setup
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    updateIcons(currentTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      let targetTheme = 'light';
+      if (document.documentElement.getAttribute('data-theme') !== 'dark') {
+        targetTheme = 'dark';
+      }
+      
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      localStorage.setItem('theme', targetTheme);
+      updateIcons(targetTheme);
+    });
   </script>
 </body>
 

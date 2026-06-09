@@ -11,40 +11,44 @@
 }
 
 :root {
-  --vermelho1: #660000;
-  --vermelho2: #800606;
-  --vermelho3: #990F0F;
   --principal: #B21B1B;
-  --vermelho4: #CC2929;
-  --vermelho5: #D94141;
-  --vermelho6: #E55C5C;
-  --vermelho7: #F27979;
-  --vermelho8: #FF9999;
-  --cinza1: #1A1A1A;
-  --cinza2: #333333;
-  --cinza3: #4D4D4D;
-  --cinza4: #666666;
-  --cinza-principal: #808080;
-  --cinza5: #999999;
-  --cinza6: #B2B2B2;
-  --cinza7: #CCCCCC;
-  --cinza8: #E5E5E5;
   --danger: #CC2929;
   --warning: #CCB129;
   --success: #29CC7A;
-  --preto: #0D0D0D;
-  --branco: #F2F2F2;
-  }
+  
+  /* Light Theme Variables */
+  --bg-color: #B3B3B3;
+  --bg-secondary: #CCCCCC;
+  --header-bg: rgba(204, 204, 204, 0.85);
+  --text-color: #1A1A1A;
+  --text-muted: #4D4D4D;
+  --card-bg: rgba(242, 242, 242, 0.7);
+  --footer-bg: #0D0D0D;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --btn-text: #FFFFFF;
+}
+
+[data-theme="dark"] {
+  --bg-color: #4D4D4D;
+  --bg-secondary: #333333;
+  --header-bg: rgba(26, 26, 26, 0.85);
+  --text-color: #F2F2F2;
+  --text-muted: #B2B2B2;
+  --card-bg: rgba(51, 51, 51, 0.6);
+  --footer-bg: #0D0D0D;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --btn-text: #FFFFFF;
+}
 
 body {
-  background-color: var(--cinza8);
+  background-color: var(--bg-color);
 }
 
 header {
   width: auto;
   height: 80px;
   padding: 15px;
-  background-color: var(--cinza7);
+  background-color: var(--bg-secondary);
 
 }
 
@@ -57,10 +61,10 @@ header .logo {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
   top: 0;
   right: 0;
-  background-color: var(--cinza-principal);
+  background-color: var(--bg-secondary);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -70,8 +74,8 @@ header .logo {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 18pt;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: var(--preto);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
   display: block;
   transition: 0.3s;
   text-transform: uppercase;
@@ -103,27 +107,27 @@ header .logo {
 }
 
 h1 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 28pt;
   font-weight: bold;
   text-align: center;
-  color: var(--preto);
+  color: var(--text-color);
   display: none;
 }
 
 h2 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 18pt;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 25px;
   text-transform: uppercase;
   color: var(--principal)
 }
 
 .textopreto {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 18pt;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 25px;
   font-weight: bold;
   text-transform: uppercase;
@@ -138,7 +142,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   flex-direction: column; */
-  background-color: var(--cinza7);
+  background-color: var(--bg-secondary);
   border-radius: 0 0 50px 50px;
 }
 
@@ -154,12 +158,13 @@ h2 {
   height: 100vh;
 }
 
-#home p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18pt;
-  color:var(--preto);
+#home .home-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  color: var(--text-color);
   padding: 15px 0;
-  text-align: left;
+  text-align: center;
+  font-weight: 400;
 }
 /* 
 #home img {
@@ -184,10 +189,10 @@ h2 {
 #home button {
   width: 200px;
   height: 40px;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: bold;
-  color:var(--branco);
+  color:var(--bg-color);
   background: var(--principal);  /* fallback for old browsers */
   background: -webkit-linear-gradient(180deg, #E55C5C 0%, #CC2929 100%);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(180deg, #E55C5C 0%, #CC2929 100%);; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -213,25 +218,25 @@ h2 {
 }
 
 #quemsou span {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 18pt;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 25px;
   text-align: center;
 }
 
 #quemsou p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 25px;
   text-align: left;
 }
 
 #quemsou h3 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 18pt;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 25px;
   text-align: center;
 }
@@ -246,10 +251,10 @@ h2 {
 #quemsou .habilidades .circle1 {
   width: 100px;
   height: 100px;
-  background-color: var(--branco);
+  background-color: var(--bg-color);
   border-radius: 100%;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -266,13 +271,13 @@ h2 {
 #quemsou .habilidades .circle2 {
   width: 150px;
   height: 150px;
-  background-color: #fff;
+  background-color: var(--text-color);
   border-radius: 100%;
   margin: 25px;
-  background-color: var(--branco);
+  background-color: var(--bg-color);
   border-radius: 100%;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -289,10 +294,10 @@ h2 {
 #quemsou .habilidades .circle3 {
   width: 100px;
   height: 100px;
-  background-color: var(--branco);
+  background-color: var(--bg-color);
   border-radius: 100%;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -316,7 +321,7 @@ h2 {
   height: 400px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -326,19 +331,19 @@ h2 {
 
 #quemsou .card h4 {
   width: 100%;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 15px;
   text-align: center;
 }
 
 #quemsou .card h5 {
   width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 15px;
   text-align: left;
   text-transform: uppercase;
@@ -356,10 +361,10 @@ h2 {
 }
 
 #oquefaco h3 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 25px;
   text-transform: uppercase;
 }
@@ -370,9 +375,9 @@ h2 {
 }
 
 #oquefaco p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
-  color: var(--preto);
+  color: var(--text-color);
   padding: 25px;
   text-align: left;
 }
@@ -388,12 +393,12 @@ h2 {
   display: block;
   width: 100%;
   height: 80px;
-  background-color: #C40000;
+  background-color: var(--principal);
   margin: auto;
   text-align: left;
   padding: 25px;
   font-size: 14pt;
-  color: #FFF;
+  color: var(--text-color);
 }
 
 #portfolio .dropdown-content {
@@ -402,27 +407,27 @@ h2 {
 
 #portfolio .container-portfolio {
   height: 500px;
-  background-color: #878787;
+  background-color: var(--text-muted);
 }
 
 #portfolio .container-portfolio p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
-  color: #fff;
+  color: var(--text-color);
   padding: 25px;
   text-align: left;
 }
 
 #contato {
-  background-color: #1A1A1A;
+  background-color: var(--footer-bg);
 }
 
 #contato p {
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
-  color: #fff;
+  color: var(--text-color);
   padding: 25px;
 }
 
@@ -432,11 +437,11 @@ h2 {
   align-items: center;
   width: 200px;
   height: 50px;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: bold;
-  color: #fff;
-  background-color: #1A1A1A;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   margin: 50px auto;
   border-radius: 50px;
   border: 2px solid #4CAF50;
@@ -455,11 +460,11 @@ h2 {
   align-items: center;
   width: 200px;
   height: 50px;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: bold;
-  color: #fff;
-  background-color: #1A1A1A;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   margin: 50px auto;
   border-radius: 50px;
   border: 2px solid #7AA5DA;
@@ -479,11 +484,11 @@ h2 {
 }
 
 #contato form fieldset label {
-  color: #fff;
+  color: var(--text-color);
   text-align: left;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
-  color: #fff;
+  color: var(--text-color);
   padding: 10px;
 }
 
@@ -493,9 +498,10 @@ h2 {
   padding: 15px;
   margin: 10px 0;
   border-radius: 50px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12pt;
-  color: #878787
+  color: #1A1A1A;
+  background-color: #F2F2F2;
 }
 
 #contato form fieldset textarea {
@@ -503,20 +509,21 @@ h2 {
   height: 200px;
   padding: 15px;
   margin: 10px 0;
-  border-radius: 50px;
-  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 25px;
+  font-family: 'Inter', sans-serif;
   font-size: 12pt;
-  color: #878787
+  color: #1A1A1A;
+  background-color: #F2F2F2;
 }
 
 #contato form #enviar {
   width: 200px;
   height: 50px;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: bold;
-  color: #fff;
-  background-color: #C40000;
+  color: var(--text-color);
+  background-color: var(--principal);
   text-align: center;
   display: block;
   margin: 50px auto;
@@ -531,43 +538,43 @@ h2 {
 }
 
 #contato .footer-container #menu-footer h3 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
-  color: #fff;
+  color: var(--text-color);
   padding: 15px;
   text-transform: uppercase;
-  color: #C40000
+  color: var(--principal)
 }
 
 #contato .footer-container #redesocial h3 {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
-  color: #fff;
+  color: var(--text-color);
   padding: 15px;
   text-transform: uppercase;
-  color: #C40000
+  color: var(--principal)
 }
 
 /* #contato .footer-container #redesocial a {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
-  color: #fff;
+  color: var(--text-color);
   padding: 15px;
   text-transform: uppercase;
-  color: #878787;
+  color: var(--text-muted);
   line-height: 1.5;
 } */
 
 #contato .footer-container #menu-footer ul li {
   text-align: left;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
   text-transform: uppercase;
-  color: #878787;
+  color: var(--text-muted);
   padding: 15px;
 }
 
@@ -575,11 +582,11 @@ h2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
   text-transform: uppercase;
-  color: #878787;
+  color: var(--text-muted);
   padding: 15px;
 }
 
@@ -591,12 +598,12 @@ h2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14pt;
   font-weight: lighter;
-  color: #fff;
+  color: var(--text-color);
   padding: 15px;
-  color: #fff;
+  color: var(--text-color);
 }
 
 #contato #nota-contato li img {
@@ -626,11 +633,11 @@ h2 {
   text-align: left;
   font-size: 1.2rem;
   text-align: left;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   /* font-size: 14pt; */
   font-weight: lighter;
   text-transform: uppercase;
-  color: #878787;
+  color: var(--text-muted);
   padding: 15px;  
 }
 
@@ -667,4 +674,42 @@ h2 {
     text-align: center;
     margin: auto;
   }
+}
+/* Theme Toggle */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--border-color);
+}
+
+/* Glassmorphism adjustments */
+header, .sidenav, .card, .circle1, .circle2, .circle3 {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Fix header alignment */
+header#inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+.theme-toggle {
+    margin-right: 15px;
 }
