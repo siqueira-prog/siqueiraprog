@@ -1,0 +1,69 @@
+/* Efeitos Neon Vermelho */
+
+@keyframes neon-red-pulse {
+  from {
+    box-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #ff0000,
+      0 0 40px #ff0000,
+      0 0 60px #ff0000;
+  }
+  to {
+    box-shadow:
+      0 0 2px #fff,
+      0 0 5px #fff,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 30px #ff0000;
+  }
+}
+
+/* Brilho constante para botões e SVGs e pulso no hover */
+.neon-red-glow {
+  box-shadow: 0 0 15px #ff0000;
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-red-glow:hover {
+  animation: neon-red-pulse 1s ease-in-out infinite alternate;
+}
+
+/* Texto com brilho neon */
+.neon-text-glow {
+  text-shadow: 0 0 10px #ff0000;
+}
+
+.neon-text-glow:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 40px #ff0000;
+}
+
+/* O SVG interno ganha filtro para brilhar também, usando drop-shadow */
+@keyframes neon-svg-pulse {
+  from {
+    filter:
+      drop-shadow(0 0 1px #fff)
+      drop-shadow(0 0 5px #fff)
+      drop-shadow(0 0 10px #ff0000)
+      drop-shadow(0 0 20px #ff0000)
+      drop-shadow(0 0 40px #ff0000);
+  }
+  to {
+    filter:
+      drop-shadow(0 0 1px #fff)
+      drop-shadow(0 0 2px #fff)
+      drop-shadow(0 0 5px #ff0000)
+      drop-shadow(0 0 10px #ff0000)
+      drop-shadow(0 0 20px #ff0000);
+  }
+}
+
+.neon-svg-glow {
+  filter: drop-shadow(0 0 1px #ff0000) drop-shadow(0 0 4px #ff0000) drop-shadow(0 0 15px #ff0000);
+  transition: all 0.3s ease-in-out;
+  color: var(--principal);
+}
+
+.neon-svg-glow:hover {
+  animation: neon-svg-pulse 1s ease-in-out infinite alternate;
+}

@@ -1,0 +1,25 @@
+:root {
+--vermelho1: #660000;
+--vermelho2: #800606;
+--vermelho3: #990F0F;
+--vermelho4: #B21B1B;
+--principal: #CC2929;
+--vermelho5: #D94141;
+--vermelho6: #E55C5C;
+--vermelho7: #F27979;
+--vermelho8: #FF9999;
+--cinza1: #1A1A1A;
+--cinza2: #333333;
+--cinza3: #4D4D4D;
+--cinza4: #666666;
+--cinza-principal: #808080;
+--cinza5: #999999;
+--cinza6: #B2B2B2;
+--cinza7: #CCCCCC;
+--cinza8: #E5E5E5;
+--danger: #CC2929;
+--warning: #CCB129;
+--success: #29CC7A;
+--preto: #0D0D0D;
+--branco: #F2F2F2;
+}
