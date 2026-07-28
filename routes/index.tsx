@@ -92,6 +92,12 @@ const portfolioItems: CarouselItem[] = [
       "Me responsabilizo em criar páginas, organizar layouts e selecionar tipografias e cores. Nesta área, sou capaz de criar landing pages que são páginas únicas de divulgação de serviço ou produto, como no caso desta página que você está vendo agora. E também, sites corporativos, blogs e até lojas virtuais",
     image: "/img/website.svg",
     link: "#",
+    gallery: {
+      title: "Versão Antiga do Portfólio (Site Legado)",
+      iframeUrl: "https://siqueira-prog.github.io/siqueiraprog/",
+      text: "Este projeto nasceu de uma vontade de voltar às origens. Após muito tempo imerso em frameworks modernos e arquiteturas complexas, decidi criar esta primeira versão do meu portfólio completamente 'na mão', utilizando apenas HTML, CSS e JavaScript puro (Vanilla).<br/><br/>Foi este exato projeto que serviu como a <strong>grande inspiração para a construção do site atual que você está navegando agora</strong>! O objetivo inicial foi não apenas relembrar os fundamentos essenciais da web, mas também garantir uma performance ultrarrápida e um controle absoluto sobre cada detalhe da interface. Ele provou que o básico, quando bem feito, constrói experiências sólidas e pavimentou o caminho para a minha identidade digital.",
+      projectUrl: "https://siqueira-prog.github.io/siqueiraprog/"
+    }
   },
   {
     id: "frontend",
@@ -100,6 +106,12 @@ const portfolioItems: CarouselItem[] = [
       "Também sou desenvolvedor frontend. O frontend é a parte gráfica que irá aparecer para o cliente, em outras palavras, foca na criação das telas. Nesse sentido, sempre busco o maior nível de fidelidade possível focando na interação e experiência do usuário.",
     image: "/img/code.png",
     link: "#",
+    gallery: {
+      title: "BarberShop Manager (Figma)",
+      iframeUrl: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F5IyS37XpzEOqiJp1BIP4GG%2FBarberShop-Manager%3Fnode-id%3D101-410%26t%3DcbKBYA41rqPeyewk-1",
+      text: "Nesta galeria, apresento os protótipos de alta fidelidade desenvolvidos no Figma para o <strong>BarberShop Manager</strong>.<br/><br/>Se você já viu a logo desse projeto no carrossel de Identidade Visual, aqui estão as telas que dão vida ao sistema! A interface foi pensada para ser limpa, intuitiva e direta, facilitando a gestão diária de uma barbearia com painéis de agendamento, fluxo de caixa e relatórios financeiros.<br/><br/>A prototipagem interativa é essencial para alinhar a experiência do usuário antes de escrevermos a primeira linha de código, garantindo que o produto final seja exatamente o que o cliente precisa.",
+      projectUrl: "https://www.figma.com/design/5IyS37XpzEOqiJp1BIP4GG/BarberShop-Manager?node-id=101-410&t=cbKBYA41rqPeyewk-1"
+    }
   },
   {
     id: "backend",
@@ -277,6 +289,8 @@ export default function Home() {
               <Carousel3D items={portfolioItems} sideBySide={true} whiteBg={true} />
             </div>
           </section>
+
+
         </article>
         <Footer />
       </div>
