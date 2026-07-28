@@ -77,7 +77,7 @@ export default function HeroInteractive() {
             width: "100%",
           }}
         >
-          <a href="/blog" style={{ margin: 0 }}>
+          {/* <a href="/blog" style={{ margin: 0 }}>
             <button
               type="button"
               name="button"
@@ -94,7 +94,7 @@ export default function HeroInteractive() {
             >
               ANÁLISES
             </button>
-          </a>
+          </a> */}
           <a href="#freela" style={{ margin: 0 }}>
             <button
               type="button"

@@ -6,6 +6,12 @@ export interface CarouselItem {
   description?: string;
   image: string;
   link?: string;
+  gallery?: {
+    iframeUrl: string;
+    text: string;
+    title?: string;
+    projectUrl?: string;
+  };
 }
 
 export interface Carousel3DProps {
@@ -264,6 +270,53 @@ export default function Carousel3D({ items, whiteBg = true, sideBySide = false }
           )}
         </div>
       </div>
+
+      {/* Dynamic Gallery Section based on Active Tab */}
+      {items[active].gallery && (
+        <div style={{ width: "100%", marginTop: "60px", padding: "0 20px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", maxWidth: "1200px", margin: "0 auto", backgroundColor: "var(--bg-secondary)", borderRadius: "12px", overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}>
+            {/* Iframe Side (50%) */}
+            <div style={{ flex: "1 1 500px", minHeight: "450px", position: "relative", borderRight: "1px solid rgba(255,255,255,0.05)" }}>
+              <iframe 
+                src={items[active].gallery.iframeUrl} 
+                style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0, border: "none" }}
+                title={items[active].gallery.title || items[active].title}
+                allowFullScreen
+              ></iframe>
+            </div>
+            {/* Text Side (50%) */}
+            <div style={{ flex: "1 1 400px", padding: "50px", display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+              <h3 style={{ color: "var(--principal)", marginBottom: "20px", textTransform: "uppercase", fontSize: "1.8rem" }}>
+                {items[active].gallery.title || items[active].title}
+              </h3>
+              <p style={{ color: "var(--text-color)", opacity: 0.9, lineHeight: "1.8", fontSize: "1.1rem", textAlign: "left", marginBottom: "30px" }} dangerouslySetInnerHTML={{ __html: items[active].gallery.text }} />
+              {items[active].gallery.projectUrl && (
+                <a href={items[active].gallery.projectUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                  <button
+                    type="button"
+                    class="neon-red-glow"
+                    style={{
+                      padding: "12px 30px",
+                      background: "transparent",
+                      color: "var(--principal)",
+                      border: "2px solid var(--principal)",
+                      textTransform: "uppercase",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontWeight: "bold",
+                      letterSpacing: "1px",
+                      cursor: "pointer"
+                    }}
+                  >
+                    Ver Projeto na Íntegra
+                  </button>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
