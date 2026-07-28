@@ -145,9 +145,9 @@ h2 {
 #block {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content:center;
   height: 80%;
-  /* flex-direction: column; */
+  flex-direction: column;
 }
 
 #home {
@@ -176,7 +176,7 @@ h2 {
 }
 
 #home #name {
-  display: block;
+  /* display: block; */
   width: 40vw;
   margin: 0 auto;
 }
@@ -550,6 +550,17 @@ h2 {
   color: #C40000
 }
 
+/* #contato .footer-container #redesocial a {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 14pt;
+  font-weight: lighter;
+  color: #fff;
+  padding: 15px;
+  text-transform: uppercase;
+  color: #878787;
+  line-height: 1.5;
+} */
+
 #contato .footer-container #menu-footer ul li {
   text-align: left;
   font-family: 'Source Sans Pro', sans-serif;
@@ -609,6 +620,20 @@ h2 {
   margin: 50px;
 }
 
+.paragrafrodape {
+  padding: 0;
+  display: block;
+  text-align: left;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* font-size: 14pt; */
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #878787;
+  padding: 15px;  
+}
+
 @media only screen and (max-width: 600px) {
   .duas-colunas {
     display: block;
@@ -629,5 +654,17 @@ h2 {
 
   .textopreto {
     text-align: center;
+  }
+
+  #home #name {
+    /* display: block; */
+    width: 250px;
+    margin: 50px 50px;
+  }
+
+  #contato #nota-contato li {
+    display: block;
+    text-align: center;
+    margin: auto;
   }
 }
